@@ -1,0 +1,37 @@
+*{ margin:0; padding:0; border:0; }
+html, body {
+  overflow-x: hidden;
+}
+body { width:100%; display:flex; flex-direction:column; height:100vh; align-items:center;}
+:focus{ outline: none; } 
+UL{ list-style:none; }
+A{ text-decoration:none; overflow:hidden; }
+
+/*** HEADER ***/
+
+HEADER{ width:100%; position:relative; flex-shrink:0; flex-direction:column; padding:26px 0 30px 0; border-bottom:1px solid #f0f0f0; margin-bottom:60px; }
+
+/*** CONTEÚDO ***/
+
+main{ width:900px; display:flex; align-self:center; flex-direction:column;  flex:1 0 auto; }
+main SECTION{ width:100%; display:flex; margin-bottom:48px; }
+main SECTION SPAN{ width:46px; height:77px; display:flex; flex-direction:column; background:url(img/bg-upvote.jpg) no-repeat 0 0; text-align: center;font: normal bold 25px/25px arial; margin-right:21px; }
+main SECTION SPAN A{ width:46px; height:32px; float:left; color:#363636; margin-bottom:12px; }
+main SECTION DIV A{ font: normal bold 15px/15px arial; color:#cbcbcb; }
+main SECTION DIV A:HOVER{ text-decoration:underline; }
+main SECTION DIV H1{ font:normal normal 23px/25px arial; color:#383535; padding:5px 0; }
+main SECTION DIV NAV{ display:flex; }
+main SECTION DIV NAV #bt-category{ height:24px; display:flex; font: normal normal 15px/15px arial; color:#fff; justify-content: center;align-items: center;border-radius: 10px;padding: 0 10px;}
+main SECTION DIV NAV #bt-category:HOVER{ text-decoration:none; }
+main SECTION DIV NAV .corUm{ background-color:#00e2ad; }
+main SECTION DIV NAV .corDois{ background-color:#00bbff; }
+main SECTION DIV NAV .corTres{ background-color:#4271d6; }
+main SECTION DIV NAV .corQuatro{ background-color:#f4973c; }
+main SECTION DIV NAV P{ font: normal normal 15px/22px arial; color:#6e6c6c; border-left:1px solid #c7c7c7; margin-left:12px; padding-left:14px; }
+main SECTION DIV NAV P A{ color:#e3472f; text-decoration:underline; margin-left:5px; margin:0 10px; }
+main SECTION DIV NAV P .coments{ background:url(img/balao.png) no-repeat 0 3px; padding-left:20px; }
+main SECTION DIV NAV P IMG{ position:relative; top:5px; }
+
+/*** RODAPÉ ***/
+
+FOOTER{ width:900px; height:54px; display:flex; flex-shrink:0; alig-self:center; background-color:#0CC;  }

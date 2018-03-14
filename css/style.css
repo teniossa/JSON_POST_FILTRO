@@ -9,7 +9,19 @@ A{ text-decoration:none; overflow:hidden; }
 
 /*** HEADER ***/
 
-HEADER{ width:100%; position:relative; flex-shrink:0; flex-direction:column; padding:26px 0 30px 0; border-bottom:1px solid #f0f0f0; margin-bottom:60px; }
+HEADER{ width:100%;  display:flex; position:relative; flex-shrink:0; padding:26px 0 30px 0; border-bottom:1px solid #f0f0f0; margin-bottom:60px; justify-content:center; }
+HEADER .ux-topo{ width:900px; display:flex;  }
+HEADER .ux-topo A[title~="Menu"]{ width:38px; height:38px; display:flex; border-radius:5px; border:1px solid #dbdbdb; flex-direction:column; justify-content:center; align-items:center; margin:0 14px 0 34px; position:relative; top:2px; }
+HEADER .ux-topo A[title~="Menu"] SPAN{ width:16px; height:4px; background-color:#545454; margin-bottom:2px; }
+HEADER .ux-topo INPUT{ width:265px; display:flex; background:#f0f0f0 url(img/bg-lupa.jpg) no-repeat 13px 13px; font:normal normal 16px/19px arial; color:#545454; padding-left:35px; border-radius:5px; }
+HEADER .ux-topo H1{ width:36px; height:40px; display:flex; position:relative; top:2px;  }
+HEADER .ux-topo H1:AFTER{ width:1px; height:40px; position:absolute; top:0; right:-17px; background-color:#efefef; content:"";}
+HEADER .ux-topo H1 A{ width:36px; height:40px; float:left; background:transparent url(img/bg-logo.png) no-repeat 0 0; text-indent:-5000px;  }
+HEADER .ux-topo DIV{ width:93px; height:40px; display:flex; position:relative; background-color:#e3472f; border-radius:5px; font:normal bold 16px/19px arial; color:#fff; justify-content: center;align-items: center; padding-left:37px; top:2px; margin:0 17px 0 207px;  }
+HEADER .ux-topo DIV A{ width:37px; height:40px; display:flex; background-color:#e3472f; font:normal bold 20px/20px arial; color:#fff;  border-right:1px solid #d63820; border-top-left-radius:5px; border-bottom-left-radius:5px;  justify-content: center;align-items: center; position:absolute; left:0; }
+HEADER .ux-topo FIGURE{ width:40px; height:40px; display:flex; background-color:#e3472f; font:normal bold 20px/20px arial; color:#fff; border-radius:5px; position:relative; top:2px; }
+HEADER .ux-topo FIGURE FIGCAPTION{ width:18px; height:18px; background-color:#e3472f; font:normal bold 14px/17px arial; color:#fff; border-radius:5px; position:absolute; left:-9px; top:10px; text-align:center; }
+
 
 /*** CONTEÚDO ***/
 
@@ -34,4 +46,37 @@ main SECTION DIV NAV P IMG{ position:relative; top:5px; }
 
 /*** RODAPÉ ***/
 
-FOOTER{ width:900px; height:54px; display:flex; flex-shrink:0; alig-self:center; background-color:#0CC;  }
+FOOTER{ width:900px; height:140px; display:flex; flex-shrink:0; alig-self:center; flex-wrap:wrap; justify-content:space-between;}
+FOOTER A[title~="Load"]{ width:100%; height:62px; display:flex; background-color:#f4f4f1; border-radius:5px;  justify-content: center;align-items: center; margin-bottom:13px; }
+FOOTER A[title~="Load"]:AFTER{ height:18px; content:"Load More"; background:url(img/bg-load-more.jpg) no-repeat 0 0; font: normal normal 17px/19px arial; color:#e44c35; padding-left:30px; text-shadow: 2px 1px 2px rgba(228, 76, 53, 1); }
+FOOTER DIV{ display:flex; }
+FOOTER DIV A{ width:36px; height:40px; display:flex; background:transparent url(img/bg-logo.png) no-repeat 0 0; text-indent:-5000px; margin-right:12px;  }
+FOOTER DIV P{ display:flex; flex-direction:column; font: normal normal 14px/17px arial; color:#2b2b2b; }
+FOOTER NAV{ display:flex; flex-wrap:wrap; justify-content:flex-end; }
+FOOTER NAV A{  font: normal normal 13px/16px arial; color:#e3472f; margin-left:10px; }
+FOOTER NAV A:HOVER{ text-decoration:underline; }
+FOOTER NAV A:FIRST-CHILD{ margin-left:0; }
+FOOTER NAV A:LAST-CHILD{ flex-wrap:wrap; flex:0 1 33.33%; color:#999; text-align:right; }
+FOOTER NAV A[title~="Facebook"]{ background:url(img/ico-facebook.jpg) no-repeat 0 0; padding-left:20px; color:#3c3c3c; }
+FOOTER NAV A[title~="Twitter"]{ background:url(img/ico-twitter.jpg) no-repeat 0 0; padding-left:20px; color:#3c3c3c; }
+
+@media screen and (max-width:1024px) and (min-width: 0) {
+HEADER .ux-topo, MAIN, FOOTER{ width:calc(100% - 10px); }
+	 }
+
+@media screen and (max-width:1024px) and (min-width: 768px) {
+FOOTER NAV{ width: 300px;}
+FOOTER NAV A:last-child{ flex:none; }
+	 }
+@media screen and (max-width:768px) and (min-width: 768px) {
+HEADER .ux-topo DIV{ margin:0 17px 0 100px;  }
+	 }
+	 
+@media screen and (max-width:425px) and (min-width: 0) {
+HEADER{ margin-bottom:30px; }
+FOOTER NAV{ display:flex; flex-wrap:wrap; justify-content:flex-start; margin-top: 20px;}
+FOOTER NAV A:LAST-CHILD{ flex-wrap:wrap; flex:none; color:#999; text-align:left; margin: 10px 0 0 0;}
+main SECTION DIV NAV #bt-category{ display:none; }
+main SECTION DIV NAV P{ font: normal normal 15px/22px arial; color:#6e6c6c; border-left:0; margin-left:0; padding-left:0; }
+	 }	 
+	 

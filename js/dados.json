@@ -71,7 +71,7 @@ window.onload=function(){
 		
 data.person.forEach(function(p){ 
   
-  var post = "<section><span><a href='#'></a>"+p.upvotes+"</span><div><a href="+p.url+">"+p.url+"</a><h1>"+p.title+"</h1><nav><a  href='#' id='bt-category' class="+ p.classcor +" title="+ p.category +">"+p.category+"</a><p>"+p.foto+"<a href='#' title="+p.author+">"+p.author+"</a>"+p.created_at+"<a  href='#' class='coments'>"+p.comments+"</a></p></nav></div></section>";
+  var post = "<section class='post'><span><a href='#'></a>"+p.upvotes+"</span><div><a href="+p.url+" target='_blank'>"+p.url+"</a><h1>"+p.title+"</h1><nav><a  href='#' id='bt-category' class="+ p.classcor +" title="+ p.category +">"+p.category+"</a><p>"+p.foto+"<a href='#' title="+p.author+">"+p.author+"</a>"+p.created_at+"<a  href='#' class='coments'>"+p.comments+"</a></p></nav></div></section>";
 		  
   document.querySelector('#dados').innerHTML += post;
   
@@ -81,7 +81,7 @@ data.person.forEach(function(p){
  $('#filtro').keyup(function () {
 		var yourtext = $(this).val();
 		if (yourtext.length > 0) {
-			var abc = $("section").filter(function () {
+			var abc = $(".post").filter(function () {
 				var str = $(this).text();
 				var re = new RegExp(yourtext, "i");
 				var result = re.test(str);
@@ -90,7 +90,7 @@ data.person.forEach(function(p){
 				}
 			}).hide();
 		} else {
-			$("section").show();
+			$(".post").show();
 		}
 	});
 
